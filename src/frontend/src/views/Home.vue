@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <feedback-table/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import FeedbackTable from "@/components/FeedbackTable";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    "feedback-table": FeedbackTable,
   },
 };
 </script>
+
+<style>
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+</style>
